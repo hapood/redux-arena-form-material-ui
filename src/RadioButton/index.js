@@ -1,4 +1,4 @@
-import { connectReduxArena } from "redux-arena-form/core";
+import { connectReduxArena } from "redux-arena-form/tools";
 export { RadioButton } from "material-ui/RadioButton";
 import RadioButtonGroup from "./RadioButtonGroup";
 

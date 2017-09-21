@@ -6,7 +6,7 @@ import {
   willReceivePropsBuilder,
   getValueFromProps,
   getErrorValueFromProps
-} from "redux-arena-form/core";
+} from "redux-arena-form/tools";
 
 function valuePumper(e, isInputChecked) {
   return isInputChecked;
