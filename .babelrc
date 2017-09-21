@@ -1,0 +1,39 @@
+{
+  "presets": [
+    "react",
+    [
+      "env",
+      {
+        "loose": true
+      }
+    ]
+  ],
+  "plugins": ["transform-class-properties"],
+  "env": {
+    "cjs": {
+      "presets": [
+        "react",
+        [
+          "env",
+          {
+            "loose": true
+          }
+        ]
+      ],
+      "plugins": ["transform-class-properties"]
+    },
+    "es": {
+      "presets": [
+        "react",
+        [
+          "env",
+          {
+            "loose": true,
+            "modules": false
+          }
+        ]
+      ],
+      "plugins": ["transform-class-properties"]
+    }
+  }
+}
