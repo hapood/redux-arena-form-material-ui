@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Checkbox from "material-ui/Checkbox";
+import Toggle from "material-ui/Toggle";
 import {
   omitHOCProps,
   willMountBuilder,
@@ -12,15 +12,15 @@ function valuePumper(e, isInputChecked) {
   return isInputChecked;
 }
 
-export default class CheckboxHOC extends Component {
+export default class ToggleHOC extends Component {
   componentWillMount = willMountBuilder(valuePumper);
   componentWillReceiveProps = willReceivePropsBuilder(valuePumper);
 
   render() {
     return (
-      <Checkbox
-        checked={getValueFromProps(this.props, false)}
-        onCheck={this.state.onChange}
+      <Toggle
+        toggled={getValueFromProps(this.props, false)}
+        onToggle={this.state.onChange}
         {...omitHOCProps(this.props)}
       />
     );

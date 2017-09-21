@@ -1,9 +1,7 @@
 {
   "name": "redux-arena-form-material-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A set of material-ui high order components used in redux-arena-form-material-ui",
-  "main": "lib/index.js",
-  "module": "es/index.js",
   "scripts": {
     "build:cjs": "cross-env NODE_ENV=release BABEL_ENV=cjs babel ./src --out-dir ./build/lib --ignore spec.js",
     "build:es": "cross-env NODE_ENV=release BABEL_ENV=es babel ./src --out-dir ./build/es --ignore spec.js",
@@ -32,7 +30,7 @@
   },
   "homepage": "https://github.com/hapood/redux-arena-form-material-ui#readme",
   "peerDependencies": {
-    "redux-arena-form": "<=1.0.0"
+    "redux-arena-form": "<=0.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

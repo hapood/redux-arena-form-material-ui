@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Checkbox from "material-ui/Checkbox";
+import TextField from "material-ui/TextField";
 import {
   omitHOCProps,
   willMountBuilder,
@@ -8,19 +8,20 @@ import {
   getErrorValueFromProps
 } from "redux-arena-form/core";
 
-function valuePumper(e, isInputChecked) {
-  return isInputChecked;
+function valuePumper(e, value) {
+  return value;
 }
 
-export default class CheckboxHOC extends Component {
+export default class SelectFieldHOC extends Component {
   componentWillMount = willMountBuilder(valuePumper);
   componentWillReceiveProps = willReceivePropsBuilder(valuePumper);
 
   render() {
     return (
-      <Checkbox
-        checked={getValueFromProps(this.props, false)}
-        onCheck={this.state.onChange}
+      <TextField
+        value={getValueFromProps(this.props)}
+        errorText={getErrorValueFromProps(this.props)}
+        onChange={this.state.onChange}
         {...omitHOCProps(this.props)}
       />
     );
