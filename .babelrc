@@ -1,18 +1,9 @@
 {
-  "presets": [
-    "react",
-    [
-      "env",
-      {
-        "loose": true
-      }
-    ]
-  ],
+  "presets": ["react"],
   "plugins": ["transform-class-properties"],
   "env": {
     "cjs": {
       "presets": [
-        "react",
         [
           "env",
           {
@@ -24,7 +15,6 @@
     },
     "es": {
       "presets": [
-        "react",
         [
           "env",
           {
